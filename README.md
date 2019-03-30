@@ -1,4 +1,4 @@
-# F29SO {Software Engineering Project 2018}
+# PedalPay
 Heriot-Watt University (Computer Science - Year 3)
 
 ## Specification
