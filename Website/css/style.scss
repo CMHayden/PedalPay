@@ -1,0 +1,2051 @@
+/*
+* Layout:
+*   1. IMPORTS. Importing fonts used bellow.
+*   2. OVERALL STYLE. Rough styling for re-used elements such as nav and footer.
+*   3. HOME PAGE STYLE. Style guide for all elements in the home page.
+*   4. ABOUT PAGE STYLE. Style fuide for all elements in the about page.
+*   5. PRODUCT PAGE STYLE. Style guide for elements in the product page.
+*   6. CONTACT PAGE STYLE. Style guide for elements in the contact page.
+*   7. BOOKING PAGE STYLE. Style guide for elements used in the booking page.
+*   8. MODAL STYLE. Style guide for the modal element used in the login operation.
+*   9. ADMIN STYLE. Style guide for the admin page.
+*   10. PROFILE STYLE. Style guide for the profile pages.
+*   11. REVIEW SYSTLE.
+*   12. TERMS AND PRIVACY STLE
+*   13. LEADERBOARD STYLE.
+*   14. SITEMAP STYLE.
+*/
+
+/************************************************************************/
+/*                              Imports                                 */
+/************************************************************************/
+
+//Iconmonstr allows for icons to be used as a font for social media links.
+@import url("iconic/css/iconmonstr-iconic-font.min.css");
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800');
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+
+/************************************************************************/
+/*                          Overall style                               */
+/************************************************************************/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #853745;
+
+  .topnav {
+    overflow: hidden;
+    background-color: #853745;
+  }
+
+  .logo {
+    font-family: 'Pacifico';
+    font-size: 1.2em;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #e5e0e6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: 0.3s;
+  }
+  .topnav a:not(.logo){
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    color: #e5e0e6;
+    padding: 20px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e5e0e6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: #853745;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .topnav a:hover:not(.logo),
+  .dropdown:hover .dropbtn {
+    background-color: #e5e0e6;
+    color: #853745;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #853745;
+    color: #e5e0e6;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transition: 0.3s;
+  }
+
+  @media screen and (max-width: 750px) {
+
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+      padding-right: 30px;
+      padding-bottom: 23px;
+      transition: 0.3s;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .topnav.responsive {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+      float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+      position: relative;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  #footerContent {
+    font-family: "Montserrat", sans-serif;
+    max-height: 350px;
+    max-width: 95%;
+    
+    #socials{
+      padding-bottom: 0.5em;
+    }
+    i {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      padding-right: 0.3em;
+      padding-left: 0.3em;
+      color: #e5e0e6;
+      transition: 0.3s;
+    }
+    i:hover{
+      color: #853745;
+      background-color: #e5e0e6;
+    }
+    #footleft {
+      float: left;
+      padding-left: 6em;
+      padding-right: 1.5em;
+      padding-top: 4em;
+      b{
+        display: block;
+        color: #e5e0e6;
+        font-weight: bolder;
+        padding-bottom: 1.5em;
+      }
+      a{
+        font-family: 'montserrat';
+        color: #D1CCD2;
+        text-decoration: none;
+        display: block;
+        font-weight: lighter;
+        padding-bottom: 0.5em;
+      }
+      @media screen and (max-width: 900px) {
+        display: none;
+    }
+    }
+
+    #footcent {
+      padding-left: 6em;
+      padding-right: 1.5em;
+      padding-top: 4em;
+      display: inline-block;
+      vertical-align: top;
+      b{
+        display: block;
+        color: #e5e0e6;
+        font-weight: bolder;
+        padding-bottom: 1.5em;
+      }
+      a{
+        font-family: 'montserrat';
+        color: #D1CCD2;
+        text-decoration: none;
+        display: block;
+        font-weight: lighter;
+        padding-bottom: 0.5em;
+      }
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+    #footcontact {
+      padding-left: 6em;
+      padding-right: 1.5em;
+      padding-top: 4em;
+      display: inline-block;
+      b{
+        display: block;
+        color: #e5e0e6;
+        font-weight: bolder;
+        padding-bottom: 0.45em;
+      }
+      p{
+        font-family: 'montserrat';
+        color: #D1CCD2;
+        text-decoration: none;
+        font-weight: lighter;
+        line-height: 0.7em;
+      }
+      @media screen and (max-width: 1250px) {
+          display: none;
+      }
+    }
+    
+
+    #footright {
+      float: right;
+      padding-right: 6em;
+      padding-top: 3.4em;
+      padding-left: 6em;
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+        a:not(.icon){
+          font-family: 'montserrat';
+          color: #D1CCD2;
+          text-decoration: none;
+          display: block;
+          font-weight: lighter;
+          padding-bottom: 0.5em;
+          text-align: right;
+          padding-right: 0.75em;
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
+        }
+    }
+
+    #socials {
+      text-align: right;
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+    #logo {
+      display: block;
+      padding-left: 6em;
+      padding-right: 1.5em;
+      padding-top: 2em;
+      text-align: center;
+      h1{
+        font-family: 'pacifico';
+        color: #e5e0e6;
+        display: inline-block;
+      }
+      p{
+        display: inline-block;
+        color: #e5e0e6;
+      }
+      @media screen and (max-width: 700px) {
+        padding-right: 0.7em;
+        h1{
+          font-size: 1.4em;
+        }
+      }
+        @media screen and (max-width: 600px) {
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 1.3em;
+          h1{
+            text-align: center;
+          }
+        }
+    }
+    #footbot{
+      display: none;
+      @media screen and (max-width: 600px){
+        display: block;
+        text-align: center;
+        padding-bottom: 1.3em;
+      }
+      #socialsCenter {
+        display: none;
+        @media screen and (max-width: 600px) {
+          display: block;
+          padding-bottom: 1em;
+        }
+      }
+      a:not(.icon){
+        font-family: 'montserrat';
+        color: #D1CCD2;
+        text-decoration: none;
+        display: block;
+        font-weight: lighter;
+        padding-bottom: 0.5em;
+        text-align: center;
+        padding-right: 0.75em;
+      }
+    }
+  }
+
+/************************************************************************/
+/*                          Home page style                             */
+/************************************************************************/
+#homeContent {
+  height: 75vh;
+  background-image: url(Images/bridge.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 12em;
+  padding-left: 10%;
+  @media only screen and (max-width: 1300px) {
+    background-image: url(Images/bridge_smaller.png);
+  }
+  @media only screen and (max-width: 800px) {
+    background-image: url(Images/bridge_small.png);
+  }
+  @media only screen and (max-width: 500px) {
+    background-image: url(Images/bridge_mobile.png);
+  }
+
+  #textBox {
+    background-color: #853745;
+    position: absolute;
+    border-radius: 25px;
+    padding: 1em;
+    max-width: 350px;
+    font-family: "Montserrat";
+    color: #e5e0e6;
+    @media only screen and (max-width: 900px) {
+      min-height: 100px;
+      max-width: 350px;
+    }
+    @media only screen and (max-width: 700px) {
+      min-height: 100px;
+      max-width: 250px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      padding-left: 10%;
+      @media only screen and (max-width: 900px) {
+        font-size: 2em;
+      }
+    }
+
+    p {
+      font-size: 1.5em;
+      padding-left: 10%;
+      @media only screen and (max-width: 900px) {
+        font-size: 1.2em;
+      }
+    }
+    #bookingButton {
+      text-align: center;
+
+        @media only screen and (max-width: 700px) {
+          text-align: center;
+          font-size: 0.8em;
+        }
+        #button3{
+          text-align: center;
+          width: 100%;
+          margin: 0;
+        #bookButton {
+          border-radius: 12.5px;
+          border: none;
+          font-family: "Montserrat";
+          background-color: #e5e0e6;
+          color: #853745;
+          font-size: 1.5em;
+          padding: 0.5em;
+          margin-bottom: 1em;
+          text-decoration: none;
+          transition: 0.3s;
+          display: none;
+        }
+        #bookButton:hover {
+          background-color: #cccccc;
+        }
+      }
+      }
+    #buttons {
+      padding-top: 1em;
+      float: left;
+      padding-left: 10%;
+      padding-right: 10%;
+      display: flex;
+      align-items: center;
+      padding-bottom: 40px;
+      @media only screen and (max-width: 700px) {
+        display: flex;
+        float: left;
+        text-align: center;
+      }
+
+      #button1 {
+        float: left;
+        padding-right: 1%;
+        width: 10em;
+        margin: 0;
+        @media only screen and (max-width: 700px) {
+          float: left;
+          text-align: center;
+          width: 7em;
+          font-size: 0.8em;
+        }
+      }
+        
+      
+ 
+      
+      #button2 {
+        float: right;
+        width: 10em;
+        margin: 0;
+        @media only screen and (max-width: 700px) {
+          float: right;
+          text-align: center;
+          width: 7em;
+          font-size: 0.8em;
+
+        }
+      }
+      a {
+        border-radius: 12.5px;
+        border: none;
+        font-family: "Montserrat";
+        background-color: #e5e0e6;
+        color: #853745;
+        font-size: 1.5em;
+        padding: 7.5%;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      a:hover {
+        background-color: #cccccc;
+      }
+    }
+  }
+}
+
+/************************************************************************/
+/*                            About page style                          */
+/************************************************************************/
+#FAQ {
+  background-color: #e5e0e6;
+  display: block;
+  margin-top: -22px;
+  padding-top: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  h1 {
+    color: #853745;
+    text-align: center;
+    font-weight: bolder;
+    font-family: "montserrat";
+  }
+  question {
+    color: #853745;
+    font-size: 1.3em;
+    padding-bottom: 1.2em;
+    font-weight: bold;
+  }
+  answer {
+    color: #ac4658;
+    padding-bottom: 1.4em;
+    a {
+      color: #ac4658;
+    }
+  }
+}
+#aboutv2Content{
+  background-color: #e5e0e6;
+  overflow: auto;
+  padding-bottom: 4em;
+    .header{
+      text-align: center;
+      .headerText{
+        background-color: #853745;
+        color: #e5e0e6;
+        display: inline-block;
+        padding-left: 4em;
+        padding-right: 4em;
+        border-bottom-right-radius: 150px;
+        border-bottom-left-radius: 150px;
+        @media screen and (max-width: 1200px){
+          padding-left: 3em;
+          padding-right: 3em;
+        }
+        @media screen and (max-width: 850px){
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+        h1{
+          font-size: 1.8em;
+          @media screen and (max-width: 850px){
+            font-size: 1.2em;
+          }
+        }
+      }
+
+    }
+    .tbleft{
+      background-color: #853745;
+      color: #e5e0e6;
+      float: left;
+      border-top-right-radius: 150px;
+      border-bottom-right-radius: 150px;
+      width: 80%;
+      margin-top: 2em;
+      padding-left: 4em;
+      padding-top: 2em;
+      padding-bottom: 2em;
+      padding-right: 4em;
+      .btnHolder11 {
+        text-align: center;
+        margin-top: 2em;
+
+        .button11 {
+          color: #853745;
+          background-color: #e5e0e6;
+          padding: 1em;
+          border-radius: 25px;
+          text-decoration: none;
+          font-size: 1em;
+          font-weight: bold;
+        }
+      }
+      h1{
+        font-weight: bolder;
+        text-align: center;
+
+      }
+      p, a{
+        color: #e5e0e6;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 1.1em;
+      }
+      @media screen and (max-width: 750px){
+        width: 51%;
+      }
+    }
+    .tbright{
+      background-color: #853745;
+      color: #e5e0e6;
+      float: right;
+      border-top-left-radius: 150px;
+      border-bottom-left-radius: 150px;
+      width: 80%;
+      margin-top: 2em;
+      padding-left: 4em;
+      padding-top: 2em;
+      padding-bottom: 2em;
+      padding-right: 4em;
+      .btnHolder11 {
+        text-align: center;
+        margin-top: 2em;
+
+        .button11 {
+          color: #853745;
+          background-color: #e5e0e6;
+          padding: 1em;
+          border-radius: 25px;
+          text-decoration: none;
+          font-size: 1em;
+          font-weight: bold;
+        }
+      }
+      h1{
+        font-weight: bolder;
+        text-align: center;
+
+      }
+      p, a{
+        color: #e5e0e6;
+        font-weight: lighter;
+        text-align: center;
+        font-size: 1.1em;
+
+      }
+      @media screen and (max-width: 750px){
+        width: 51%;
+      }
+  }
+
+}
+
+/************************************************************************/
+/*                          Product page style                          */
+/************************************************************************/
+#productContent {
+  background-color: #e5e0e6;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  .header{
+    text-align: center;
+    margin-bottom: 4em;
+    .headerText{
+      background-color: #853745;
+      color: #e5e0e6;
+      display: inline-block;
+      padding-left: 4em;
+      padding-right: 4em;
+      border-bottom-right-radius: 150px;
+      border-bottom-left-radius: 150px;
+      @media screen and (max-width: 1200px){
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+      @media screen and (max-width: 850px){
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+      h1{
+        font-size: 1.8em;
+        @media screen and (max-width: 850px){
+          font-size: 1.2em;
+        }
+      }
+    }
+
+  }
+  .reviews {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 6em;
+    width: 1050px;
+    height: 350px;
+    overflow: hidden;
+    background-color: #853745;
+    border-radius: 25px;
+    position: relative;
+    @media screen and (max-width: 1200px){
+      width: 80%;
+      height: 400px;
+    }
+    @media screen and (max-width: 850px){
+      width: 90%;
+      height: 400px;
+    }
+    @media screen and (max-width: 470px){
+      width: 90%;
+      height: 450px;
+    }
+    @media screen and (max-width: 390px){
+      width: 90%;
+      height: 490px;
+    }
+}
+
+.panel {
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+    display: inline-block;
+    .btnHolder {
+      text-align: center;
+
+      .button {
+        color: #853745;
+        background-color: #e5e0e6;
+        padding: 1.2em;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1em;
+      }
+    }
+}
+
+.PanelAct {
+    left: 0;
+}
+
+.panel p {
+    font-size: 1.2em;
+    color: #e5e0e6;
+    padding: 2.2em;
+    @media screen and (max-width: 470px){
+      padding: 1em;
+    }
+}
+
+.panel h1 {
+    color: #e5e0e6;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.control {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+.control span {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in
+}
+
+.ContActive {
+    background-color: #bbb !important;
+}
+
+  .active {
+    display: inline-block;
+  }
+  .inactive {
+    display: none;
+  }
+  .revieeeeews {
+    width: 86%;
+    border-radius: 75px;
+    padding: 2em;
+    background-color: #e5e0e6;
+    .profilePicture {
+      border-radius: 50%;
+      behavior: url(PIE.htc); //Allows for working with ie8
+      height: 100px;
+      width: 100px;
+      background-image: url(Images/profile.png);
+      background-size: 100%;
+      margin-right: 50px;
+      float: left;
+    }
+    .information {
+      text-align: center;
+      max-width: 30%;
+      border-right: 2px solid #9b898d;
+      float: left;
+      padding-right: 2em;
+      margin-right: 2em;
+      h1 {
+        color: #853745;
+        font-family: "Montserrat";
+      }
+      star {
+        font-family: "wingdings";
+        color: #853745;
+        font-size: 1.6em;
+      }
+      nostar {
+        font-family: "wingdings";
+        color: #9b898d;
+        font-size: 1.6em;
+      }
+    }
+    .revieeeeew {
+      p {
+        font-family: "Montserrat";
+        color: #853745;
+        padding-left: 2em;
+      }
+    }
+  }
+
+  #productBox {
+    background-color: #e5e0e6;
+    color: #853745;
+    float: left;
+    margin-bottom: 2em;
+    margin-right: 0.75em;
+    margin-left: 0.75em;
+    border-radius: 25px;
+    min-width: 200px;
+    max-width: 19.25%;
+    min-height: 260px;
+    padding: 1em;
+    font-family: "Montserrat";
+
+    #text {
+      min-height: 320px;
+      padding-left: 1em;
+      padding-right: 1em;
+      h1{
+        text-align: center;
+      }
+      p{
+        font-size: 1.2em;
+      }
+    }
+
+    #buttonholder {
+      text-align: center;
+      padding-bottom: 1.2em;
+
+      button {
+        background-color: #853745;
+        color: #e5e0e6;
+        border-radius: 25px;
+        border: none;
+        padding: 1em;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+/************************************************************************/
+/*                        Contact page style                            */
+/************************************************************************/
+#contactContent {
+  background-color: #e5e0e6;
+  .header{
+    text-align: center;
+    margin-bottom: 4em;
+    .headerText{
+      background-color: #853745;
+      color: #e5e0e6;
+      display: inline-block;
+      padding-left: 4em;
+      padding-right: 4em;
+      border-bottom-right-radius: 150px;
+      border-bottom-left-radius: 150px;
+      @media screen and (max-width: 1200px){
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+      @media screen and (max-width: 850px){
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+      h1{
+        font-size: 1.8em;
+        @media screen and (max-width: 850px){
+          font-size: 1.2em;
+        }
+      }
+    }
+
+  }
+  .wrapper{
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+  
+  #informationBox {
+    background-color: #853745;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: inline-block;
+    text-align: left;
+    width: 90%;
+    padding: 1.4em;
+    h1,
+    p {
+      color: #e5e0e6;
+    }
+    h1{
+      font-weight: bolder;
+      font-size: 2em;
+      text-align: center;
+    }
+    p{
+      font-weight: lighter;
+      font-size: 1.4em;
+    }
+  }
+
+  #formBox {
+    background-color: #853745;
+    font-family: "Montserrat";
+    display: inline-block;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align: left;
+    width: 90%;
+    padding: 1.4em;
+    margin-bottom: 4em;
+    h1{
+      font-weight: bolder;
+      font-size: 2em;
+      text-align: center;
+      color: #e5e0e6;
+    }
+    label {
+      font-family: "Montserrat";
+      color: #e5e0e6;
+      font-size: 1.2em;
+    }
+    ::placeholder {
+      color: #853745;
+      font-family: "Montserrat";
+    }
+    input[type="text"],
+    textarea,
+    input[type="email"],
+    input[type="submit"] {
+      border-radius: 25px;
+      border: 0px;
+      padding: 1em;
+      margin-top: 5px;
+      background-color: #e5e0e6;
+      margin-bottom: 1.5em;
+      color: #853745;
+      font-family: "Montserrat";
+      font-size: 1em;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 80%
+    }
+    textarea{
+      vertical-align: top;
+    }
+    #textarea {
+      vertical-align: top;
+    }
+    .btnHolder{
+      text-align: center;
+    }
+  }
+}
+}
+
+/************************************************************************/
+/*                         Booking page style                           */
+/************************************************************************/
+
+#bookingContent {
+  background-color: #e5e0e6;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  color: #e5e0e6;
+  .header{
+    text-align: center;
+    margin-bottom: 4em;
+    .headerText{
+      background-color: #853745;
+      color: #e5e0e6;
+      display: inline-block;
+      padding-left: 4em;
+      padding-right: 4em;
+      border-bottom-right-radius: 150px;
+      border-bottom-left-radius: 150px;
+      @media screen and (max-width: 1200px){
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+      @media screen and (max-width: 850px){
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+      h1{
+        font-size: 1.8em;
+        @media screen and (max-width: 850px){
+          font-size: 1.2em;
+        }
+      }
+    }
+
+  }
+  @media screen and (max-width: 600px){
+    padding: 0em;
+    padding-bottom: 3em;
+  }
+
+  #hide {
+    display: none;
+  }
+
+  #booking {
+    color: #e5e0e6;
+    background-color: #853745;
+  }
+
+  #bookingBox {
+    #map {
+      height: 60vh;
+      width: 100%;
+      border-radius: 25px;
+    }
+    @media screen and (max-width: 600px){
+      margin: 0em;
+      border-radius: 0px;
+    }
+    background-color: #853745;
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    border-radius: 25px;
+    h1 {
+      font-family: "Pacifico";
+      color: #e5e0e6;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    h2 {
+      color: #e5e0e6;
+      font-family: "Montserrat";
+      text-align: center;
+    }
+
+    h3 {
+      color: #e5e0e6;
+      font-family: "Montserrat";
+    }
+
+    p {
+      color: #e5e0e6;
+    }
+
+    a {
+      text-decoration: underline;
+      color: #e5e0e6;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+      padding-bottom: 2em;
+    }
+
+      button,
+      #prvBtn,
+      #nextBtn {
+        background-color: #e5e0e6;
+        border: none;
+        color: #853745;
+        border-radius: 25px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 2em;
+        padding-left: 2em;
+        font-family: "Montserrat";
+        font-size: 1em;
+        cursor: pointer;
+        transition: 0.3s;
+      } 
+      #nextBtn:hover,
+      #prvBtn:hover,
+      button:hover{
+        background-color: #D1CCD2;
+      }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #9e9e9e;
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    .step.active {
+      opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #e5e0e6;
+    }
+    #form {
+      padding-top: 2em;
+      .listed{
+        margin-left: 2em;
+      }
+      label {
+        font-size: 1.2em;
+        font-family: "Montserrat";
+        color: #e5e0e6;
+        light{
+          font-weight: lighter;
+          color: #D1CCD2;
+        }
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="datetime-local"]{
+        border-radius: 25px;
+        border: 0px;
+        padding: 1em;
+        margin-top: 5px;
+        background-color: #e5e0e6;
+        margin-bottom: 1.5em;
+        width: calc(99% - 2em);
+        font-family: "Montserrat";
+        color: #853745;
+        @media screen and (max-width: 600px){
+          font-size: 1em;
+          margin-top: 0.2em;
+          margin-bottom: 0.2em;
+        }
+      }
+      ::placeholder{
+        color: #853745;
+        @media screen and (max-width: 600px){
+          margin-top: 0.2em;
+          margin-bottom: 0.2em;
+        }
+      }
+      input[type="checkbox"]{
+        margin-right: 2em;
+      }
+      select{
+        color: #853645;
+        font-family: 'Montserrat';
+        font-size: 1em;
+        width: 40%;
+        padding: 0.8em;
+        margin-bottom: 1em;
+        border: 0 !important;
+        border-radius: 25px;
+        /* needed */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        /* SVG background image */
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='maroon'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+        background-size: 12px;
+        background-position: calc(100% - 20px) center;
+        background-repeat: no-repeat;
+        background-color: #e5e0e6;
+      }
+      options {
+        border-radius: 50px;
+        height: 3.5em;
+        border: 0px;
+        padding: 1em;
+        margin-top: 5px;
+        background-color: #e5e0e6;
+        margin-bottom: 1.5em;
+        width: calc(99% - 2em);
+        font-family: "Montserrat";
+        color: #853745;
+      }
+      #buttonholder {
+        text-align: center;
+        button {
+          background-color: #e5e0e6;
+          border: none;
+          color: #853745;
+          border-radius: 25px;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          padding-right: 2em;
+          padding-left: 2em;
+          font-family: "Montserrat";
+          font-size: 1em;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+              button:hover{
+        background-color: #D1CCD2;
+      }
+      }
+    }
+  }
+}
+
+/************************************************************************/
+/*                          Modal Style                                 */
+/************************************************************************/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: calc(11.4vh); /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+  .modal-content {
+    background-color: #e5e0e6;
+    margin: auto;
+    padding: 2em;
+    width: 50%;
+    border-radius: 25px;
+    @media screen and (max-width: 650px) {
+      width: 80%;
+    }
+  }
+
+  .close {
+    color: #999999;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  label {
+    font-family: "Montserrat";
+    color: #853745;
+    font-size: 1.2em;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  ::placeholder {
+    border-radius: 25px;
+    border: 0px;
+    padding: 0.8em;
+    font-size: 1em;
+    margin-top: 5px;
+    background-color: #853745;
+    margin-bottom: 1.5em;
+    width: 96%;
+    color: #e5e0e6;
+    font-family: "Montserrat";
+  }
+  select{
+    color: #e5e0e6;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    width: 32%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 0 !important;
+    border-radius: 25px;
+    /* needed */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* SVG background image */
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 20px) center;
+    background-repeat: no-repeat;
+    background-color: #853645;
+  }
+  @media screen and (max-width: 650px) {
+    input[type="text"],
+    input[type="password"],
+    ::placeholder {
+      border-radius: 25px;
+      border: 0px;
+      padding: 0.2em;
+      padding-bottom: 0.3em;
+      padding-top: 0.3em;
+      padding-left: 0.75em;
+      margin-top: 5px;
+      background-color: #853745;
+      margin-bottom: 1.5em;
+      width: 90%;
+      color: #e5e0e6;
+      font-family: "Montserrat";
+    }
+  }
+  #buttonholder {
+    text-align: center;
+    button,
+    #prvBtn,
+    #nextBtn {
+      background-color: #853745;
+      border: none;
+      color: #e5e0e6;
+      border-radius: 25px;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-right: 2em;
+      padding-left: 2em;
+      font-family: "Montserrat";
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    } 
+    #nextBtn:hover,
+    #prvBtn:hover,
+    button:hover{
+      background-color: #9e4152;
+    }
+  }
+
+  h1 {
+    font-family: "Pacifico";
+    color: #853745;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  h2 {
+    color: #853745;
+    font-family: "Montserrat";
+    text-align: center;
+  }
+
+  h3 {
+    color: #853745;
+    font-family: "Montserrat";
+  }
+
+  p {
+    color: #853745;
+  }
+  .confirmation{
+    color: #853745;
+    text-align: center;
+    font-size: 1.4em;
+    padding-top: 2em;
+  }
+  .confirmationLink{
+    text-decoration: none;
+    background-color: #853745;
+    color: #e5e0e6;
+    padding: 1em;
+    text-align: center;
+    border-radius: 25px;
+    transition: 0.3s;
+  }
+  .confirmationLink:hover{
+    background-color: #913b4b;
+  }
+  .btnHolder{
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 2em;
+  }
+  a {
+    text-decoration: underline;
+    color: #853745;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+
+  #prevBtn {
+    background-color: #853745;
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #9e9e9e;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #853745;
+  }
+}
+
+/************************************************************************/
+/*                          Admin Style                                 */
+/************************************************************************/
+#adminContent {
+  background-color: #e5e0e6;
+  padding: 2em;
+  height: auto;
+  color: #e5e0e6;
+ #map{
+   height: 60%;
+   width: 60%;
+
+ }
+  #userBookingsReportDiv,
+  #userDetailsDiv {
+    display: none;
+  }
+
+  #buttonholder {
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  #userBookings {
+    #userBookingsDiv {
+      background-color: #e5e0e6;
+      color: #853745;
+      margin-top: 2em;
+      margin-bottom: 2em;
+      border-radius: 25px;
+      width: 50%;
+      margin-left: 25%;
+      p {
+        padding: 0.75em;
+        text-align: center;
+      }
+    }
+  }
+  #mapContainer,
+  #register,
+  #graphsBox,
+  #report,
+  #updateBikes,
+  #RegisteredUsersReport,
+  #UserBookingsReport,
+  #userBookings {
+    background-color: #853745;
+    padding: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    border-radius: 25px;
+    font-family: "Montserrat";
+  }
+  #mapContainer {
+    min-height: 60vh;
+    #mapBox {
+      padding: 2em;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      margin-left: 2em;
+      margin-right: 2em;
+      height: 60vh;
+    }
+  }
+  #register,
+  #report,
+  #updateBikes,
+  #RegisteredUsersReport,
+  #UserBookingsReport,
+  #userBookings {
+    input[type="text"],
+    input[type="password"] {
+      border-radius: 25px;
+      border: 0px;
+      padding: 1em;
+      padding-right: 2em;
+      margin-top: 5px;
+      background-color: #e5e0e6;
+      margin-bottom: 1.5em;
+      width: calc(99% - 2em);
+      color: #853745;
+      font-family: "Montserrat";
+    }
+    button {
+      background-color: #e5e0e6;
+      border: none;
+      color: #853745;
+      border-radius: 25px;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-right: 2em;
+      padding-left: 2em;
+      font-family: "Montserrat";
+      font-weight: bold;
+    }
+  }
+}
+/************************************************************************/
+/*                        Reviews Style                                 */
+/************************************************************************/
+#wrapper {
+  text-align: center;
+  padding: 4em;
+  #leaveReview {
+    text-align: left;
+    border-radius: 50px;
+    background-color: #e5e0e6;
+    display: inline-block;
+    padding: 4em;
+    width: 50%;
+    #form {
+      label {
+        font-size: 1.2em;
+        color: #853745;
+      }
+      h1 {
+        color: #853745;
+        font-family: "Montserrat";
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      select,
+      option {
+        border-radius: 50px;
+        height: 3.5em;
+        border: 0px;
+        padding: 1em;
+        margin-top: 5px;
+        background-color: #853745;
+        margin-bottom: 1.5em;
+        width: 120px;
+        font-family: "wingdings";
+        color: #e5e0e6;
+        text-align: center;
+      }
+      .buttonholder {
+        text-align: center;
+        padding: 2em;
+        input[type="submit"] {
+          background-color: #853745;
+          color: #e5e0e6;
+          font-family: "Montserrat";
+          border: none;
+          border-radius: 25px;
+          height: 50px;
+          width: 100px;
+        }
+      }
+      textarea {
+        padding: 1em;
+        margin-top: 1em;
+        background-color: #853745;
+        color: #e5e0e6;
+        font-family: "montserrat";
+        font-size: 1em;
+        width: 95%;
+        border-radius: 25px;
+        resize: vertical;
+      }
+      textarea::placeholder {
+        color: #e5e0e6;
+      }
+    }
+  }
+}
+
+/************************************************************************/
+/*                        Profile Style                                 */
+/************************************************************************/
+#profileContent {
+  padding: 8em;
+  padding-top: 0em;
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  background-color: #e5e0e6;
+  @media screen and (max-width: 1150px) {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  @media screen and (max-width: 640px) {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+  .header{
+    text-align: center;
+    .headerText{
+      background-color: #853745;
+      color: #e5e0e6;
+      display: inline-block;
+      padding-left: 4em;
+      padding-right: 4em;
+      margin-bottom: 4em;
+      border-bottom-right-radius: 150px;
+      border-bottom-left-radius: 150px;
+      @media screen and (max-width: 1200px){
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+      @media screen and (max-width: 850px){
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+      h1{
+        font-size: 1.6em;
+        @media screen and (max-width: 850px){
+          font-size: 1.2em;
+        }
+      }
+    }
+
+  }
+
+  #profileWrapper {
+    #profilePicture {
+      border-radius: 50%;
+      behavior: url(PIE.htc); //Allows for working with ie8
+      height: 100px;
+      width: 100px;
+      background-image: url(Images/profile.png);
+      background-size: 100%;
+      margin-right: 50px;
+      float: left;
+    }
+    #profileNav {
+      min-width: 100%;
+      min-height: 3em;
+      .tab {
+        position: relative;
+        border-top-left-radius: 75px;
+        border-top-right-radius: 75px;
+        color: #e5e0e6;
+        text-decoration: none;
+        background-color: #74303b;
+        padding: 1em;
+        float: right;
+        min-width: 220px;
+        text-align: center;
+        margin-right: 0px;
+        margin-left: -15px;
+        z-index: 0;
+        box-shadow: inset 0 -12px 45px -12px #333;
+        border-right: #333;
+        transition: 0.3s;
+        @media screen and (max-width: 960px) {
+          min-width: 180px;
+          margin-left: -35px;
+          padding-left: 0.75em;
+          padding-right: 0.75em;
+          border-top-left-radius: 60px;
+          border-top-right-radius: 60px;
+        }
+        @media screen and (max-width: 760px) {
+          min-width: 140px;
+          margin-left: -45px;
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: 1em;   
+          min-width: 100px;   
+          margin-left: -25px;
+          border-top-left-radius: 40px;
+          border-top-right-radius: 40px;  
+        }
+        @media screen and (max-width: 340px){
+          margin-left: -33px;
+        }
+      }
+      .tab:hover{
+        background-color: #913b4b;
+
+      }
+      #activebooking {
+        position: relative;
+        background-color: #853745;//
+        margin-right: 0px;
+        box-shadow: -7px 0 5px -5px #333;
+        z-index: 1;
+      }
+      #activehealth {
+        position: relative;
+        background-color: #853745;//
+        margin-right: 0px;
+        box-shadow: -7px 0 5px -5px #333, 7px 0 5px -5px #333;
+        z-index: 1;
+      }
+      #activepersonal {
+        position: relative;
+        background-color: #853745;//
+        margin-right: 0px;
+        box-shadow: 7px 0 5px -5px #333;
+        z-index: 1;
+      }
+    }
+    #healthProfile {
+      min-height: 450px;
+      overflow: auto;
+      min-width: 80%;
+      #healthLeft {
+        float: left;
+        padding: 2em;
+        border-right: #e5e0e6;
+        border-right-style: solid;
+        border-right-width: 3px;
+      }
+      #healthRight {
+        float: right;
+        padding: 2em;
+        #chart {
+          min-height: 144px;
+        }
+      }
+      @media screen and (max-width: 1260px){
+        display: block;
+        #healthLeft{
+          border-right: none;
+          display: block;
+          float: none;
+        }
+        #healhright{
+          display: none;
+          text-align: center;
+          #chart{
+            display: none;
+          }
+          #btnHolder{
+            display: none;
+            button{
+              padding: 10em;
+            }
+          }
+        }
+      }
+    }
+
+    .profile {
+      padding: 4em;
+      background-color: #853745;//
+      border-radius: 75px;
+      border-top-right-radius: 0px;
+      color: #e5e0e6;
+      position: relative;
+      margin-right: 0px;
+      margin-left: -15px;
+      z-index: 0;
+      @media screen and (max-width: 390px){
+        border-top-left-radius: 0px;
+      }
+      a {
+        color: #e5e0e6;
+      }
+      .center {
+        text-align: center;
+      }
+
+      input[type="text"] {
+        border-radius: 25px;
+        border: 0px;
+        padding: 1em;
+        padding-right: 2em;
+        margin-top: 5px;
+        background-color: #e5e0e6;
+        margin-bottom: 1.5em;
+        width: calc(99% - 2em);
+        color: #853745;//
+        font-family: "Montserrat";
+      }
+      ::placeholder {
+        color: #853745;//
+      }
+      input[type="submit"] {
+        background-color: #e5e0e6;
+        color: #853745;//
+        padding: 1em;
+        border-radius: 25px;
+        border: none;
+        font-family: "Montserrat";
+        font-size: 1em;
+      }
+
+      .btnHolder {
+        padding: 2em;
+        text-align: center;
+
+        .button {
+          color: #853745;//
+          background-color: #e5e0e6;
+          padding: 1em;
+          border-radius: 25px;
+          text-decoration: none;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+/************************************************************************/
+/*                         Policies Style                               */
+/************************************************************************/
+#termsandprivacy{
+  padding-top: 5em;
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-bottom: 5em;
+  background-color: #e5e0e6;
+  color: #853745;
+  h1{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  light{
+    font-weight: lighter;
+    color: #9e4152;
+  }
+  p{
+    font-weight: 400;
+  }
+  @media screen and (max-width: 900px){
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  @media screen and (max-width: 500px){
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+
+
+
+/************************************************************************/
+/*                       Leaderboard Style                              */
+/************************************************************************/
+
+.leaderBoardContent {
+  padding-left: 2em;
+  padding-right: 2em;
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: #e5e0e6;
+  padding-bottom: 4em;
+  @media screen and (max-width: 900px) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  @media screen and (max-width: 750px) {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 4em;
+  }
+  @media screen and (max-width: 475px){
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+  .header{
+    text-align: center;
+    .headerText{
+      background-color: #853745;
+      color: #e5e0e6;
+      display: inline-block;
+      padding-left: 4em;
+      padding-right: 4em;
+      margin-bottom: 4em;
+      border-bottom-right-radius: 150px;
+      border-bottom-left-radius: 150px;
+      @media screen and (max-width: 1200px){
+        padding-left: 3em;
+        padding-right: 3em;
+      }
+      @media screen and (max-width: 850px){
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+      h1{
+        font-size: 1.6em;
+        @media screen and (max-width: 850px){
+          font-size: 1.2em;
+        }
+      }
+    }
+
+  }
+  #leaderBoardWrapper {
+    #allTimeLeaderboard{
+      display: none;
+    }
+    #leaderboardWeekly{
+      display: block;
+    }
+
+    .leaderBoardNav {
+      min-width: 100%;
+      min-height: 3em;
+      .tab {
+        position: relative;
+        border-top-left-radius: 75px;
+        border-top-right-radius: 75px;
+        color: #e5e0e6;
+        text-decoration: none;
+        background-color: #6d2d38;//
+        padding: 1em;
+        float: right;
+        min-width: 150px;
+        text-align: center;
+        margin-right: 0px;
+        margin-left: -25px;
+        z-index: 0;
+        box-shadow: inset 0 -10px 25px -10px #333;
+        border-right: #333;
+        transition: 0.3s;
+        @media screen and (max-width: 750px) {
+          min-width: 110px;
+          margin-left: -35px
+        }
+      }
+      .tab:hover{
+        background-color: #913b4b;
+      }
+      .active {
+        position: relative;
+        background-color: #853745;
+        margin-right: 0px;
+        box-shadow: -7px 0 5px -5px #333;
+        z-index: 1;
+      }
+      .active2 {
+        position: relative;
+        background-color: #853745;
+        margin-right: 0px;
+        box-shadow: 7px 0 5px -5px #333;
+        z-index: 1;
+      }
+    }
+    .leaderboard{
+      padding: 4em;
+      background-color: #853745;
+      border-radius: 75px;
+      border-top-right-radius: 0px;
+      color: #e5e0e6;
+      position: relative;
+      margin-right: 0px;
+      margin-left: -15px;
+      z-index: 0;
+      h1{
+        text-align: center;
+        color: #e5e0e6;
+        font-weight: bold;
+      }
+      .first{
+        p{
+          font-size: 1.75em;
+        }
+      }
+      .second{
+        p{
+          font-size: 1.6em;
+        }
+      }
+      .third{
+        p{
+          font-size: 1.45em;
+        }
+      }
+      .fourth{
+        p{
+          font-size: 1.3em;
+        }
+      .fifth{
+        p{
+          font-size: 1.15em;
+        }
+      }
+      }
+      .leaderboardRow{
+        display: block;
+        text-align: center;
+        .hide{
+          @media screen and (max-width: 600px){
+            display: none;
+          }
+        }
+        p{
+          color: #e5e0e6;
+        }
+          .hide{
+            @media screen and (max-width: 800px){
+              display: none;
+            }
+        
+        }
+
+      }
+    }
+  }
+
+}
+/************************************************************************/
+/*                         Sitemap Style                                */
+/************************************************************************/
+  .sitemapwrapper{
+    padding: 6em;
+    background-color: #e5e0e6;
+    color: #853745;
+    overflow: auto;
+    a{
+      color: #853745;
+    }
+    .left{
+      display: inline-block;
+      margin-right: 20em;
+    }
+    .right{
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
