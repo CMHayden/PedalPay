@@ -1,5 +1,5 @@
 # PedalPay
-Heriot-Watt University (Computer Science - Year 3)
+A live version can be found at <a href="http://www.pedalpay.net">PedalPay.net</a>
 
 ## Specification
 "A local company is planning to set up a bike share programme in the city of Edinburgh. In order to ensure the efficiency of its operations and guarantee a high-quality customer experience, the company has decided to outfit the programme with a new mobile reservation system that connects customers with bikes, together with a system that enables its operational control centre to monitor and make changes to the overall state of the bike share system (e.g., track the location of bikes, replace defective bikes, order bikes to be redistributed to new locations in the city, etc.), and for managers to review usage reports and statistics. The company is eager to try out new technology and offer new features that aren’t currently available in bike share programmes in other cities. The system will be deployed throughout the city and, depending on its success, may be deployed in other cities where the company operates.
